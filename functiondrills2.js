@@ -89,3 +89,31 @@ function howManyDays (month){
     }
     return result;
 }
+
+function rockPaperScissors (number){
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if (number > 3 || number < 1){
+        return 'Please enter a number from 1 to 3.'
+    }
+    if (randomNo === 1 && number === 3){
+        return 'Computer wins! Rock beats scissors'
+    }
+    if (randomNo === 2 && number === 1){
+        return 'Comupter wins! Paper beats rock.'
+    }
+    if (randomNo === 3 && number === 2){
+        return 'Comupter wins! Scissors beats paper.'
+    }
+    if (randomNo === 3 && number === 1){
+        return 'Player wins! Rock beats scissors.'
+    }
+    if (randomNo === 2 && number === 3){
+        return 'Player wins! Scissors beats paper.'
+    }
+    if (randomNo === 1 && number === 2){
+        return 'Player wins! Paper beats rock.'
+    }
+    if (randomNo === number){
+        return "It's a tie!"
+    }
+}
